@@ -1,0 +1,116 @@
+public class Main {
+    import java.util.Scanner;
+
+public class InsuranceApp {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Step 1: Change "heath" to "insurance"
+        System.out.println("Step 1: Change 'heath' to 'insurance'");
+        String appType = "heath";
+        appType = appType.replace("heath", "insurance");
+        System.out.println("App Type: " + appType);
+        System.out.println();
+        
+        // Step 2: Click on insurance - medical insurance and general insurance
+        System.out.println("Step 2: Click on insurance - medical insurance and general insurance");
+        String[] insuranceTypes = {"Medical Insurance", "General Insurance"};
+        for (String insuranceType : insuranceTypes) {
+            System.out.println("Clicked on: " + insuranceType);
+        }
+        System.out.println();
+        
+        // Step 3: Click on medical Insurance - NHIF, BRITAM AFFYA TELE, PHELP MEMBER CONTRIBUTION
+        System.out.println("Step 3: Click on medical Insurance - NHIF, BRITAM AFFYA TELE, PHELP MEMBER CONTRIBUTION");
+        String[] medicalInsuranceOptions = {"NHIF", "BRITAM AFFYA TELE", "PHELP MEMBER CONTRIBUTION"};
+        for (String option : medicalInsuranceOptions) {
+            System.out.println("Clicked on: " + option);
+        }
+        System.out.println();
+        
+        // Step 4: Click on apply and fill out the form
+        System.out.println("Step 4: Click on apply and fill out the form");
+        System.out.println("Please provide the following details:");
+        
+        // Principal member
+        System.out.print("Principal member name: ");
+        String principalName = scanner.nextLine();
+        
+        System.out.print("Principal member ID number with image: ");
+        String principalID = scanner.nextLine();
+        
+        System.out.print("Principal member email address: ");
+        String principalEmail = scanner.nextLine();
+        
+        // Spouse
+        System.out.print("Spouse name: ");
+        String spouseName = scanner.nextLine();
+        
+        System.out.print("Spouse ID number with image: ");
+        String spouseID = scanner.nextLine();
+        
+        System.out.print("Spouse email address: ");
+        String spouseEmail = scanner.nextLine();
+        
+        // Children
+        System.out.print("Number of children: ");
+        int numberOfChildren = scanner.nextInt();
+        scanner.nextLine(); // Consume the remaining newline character
+        
+        for (int i = 1; i <= numberOfChildren; i++) {
+            System.out.println("Child " + i + ":");
+            
+            System.out.print("Name: ");
+            String childName = scanner.nextLine();
+            
+            System.out.print("Date of birth: ");
+            String childDOB = scanner.nextLine();
+            
+            System.out.print("Birth certificate image: ");
+            String childBirthCert = scanner.nextLine();
+        }
+        
+        System.out.print("Referral phone number: ");
+        String referralPhoneNumber = scanner.nextLine();
+        System.out.println();
+        
+        // Step 5: Payment section
+        System.out.println("Step 5: Payment section");
+        System.out.println("Please select the payment details:");
+        
+        System.out.print("Pay (daily/weekly/monthly): ");
+        String paymentPeriod = scanner.nextLine();
+        
+        System.out.print("Payment method (Mpesa/Airtel Money): ");
+        String paymentMethod = scanner.nextLine();
+        
+        System.out.print("Phone number to send prompt: ");
+        String phoneNumber = scanner.nextLine();
+        System.out.println();
+        
+        // Step 5.1: Payment confirmation
+        System.out.println("Step 5.1: Payment confirmation");
+        System.out.println("Payment successful. Receipt of funds to PHELP.");
+        System.out.println("Cover will be processed, and cards issued within 14 working days.");
+        System.out.println("Please note that a 30-day waiting period applies, except for accidents.");
+        System.out.println();
+        
+        // Step 5.2: List of hospitals
+        System.out.println("Step 5.2: List of hospitals");
+        System.out.println("You can search for hospitals by county or use GPS to find the nearest hospital to you.");
+        System.out.println("Each hospital name is a link that can be redirected.");
+        System.out.println();
+        
+        // Finance/wallet section
+        System.out.println("Finance/wallet section");
+        System.out.println("Click on this section to view the following:");
+        System.out.println("- Total premium");
+        System.out.println("- Amount paid");
+        System.out.println("- Balance");
+        System.out.println("- Number of referrals");
+        System.out.println("- Amount payable");
+        System.out.println("Color codes: Red (default), Green (update), Blue (paid in advance)");
+    }
+}
+
+}
